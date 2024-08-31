@@ -577,8 +577,11 @@ html{
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
   background-color: transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   outline-width: 1px;
-  outline-offset: 0px;
 }
 
 .button{
@@ -676,10 +679,6 @@ html{
 
 .gap-4{
   gap: 1rem;
-}
-
-.gap-5{
-  gap: 1.25rem;
 }
 
 .border{

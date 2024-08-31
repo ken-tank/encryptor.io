@@ -24,7 +24,7 @@
     }
 
     .input {
-        @apply bg-transparent border border-slate-700 outline-1 outline-offset-0;
+        @apply bg-transparent border border-slate-700 outline-1 px-2 py-1;
     }
 
     .button {
