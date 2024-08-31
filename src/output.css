@@ -628,6 +628,10 @@ html{
   min-height: 100vh;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .flex-grow{
   flex-grow: 1;
 }
@@ -730,5 +734,17 @@ html{
 @media (min-width: 768px){
   .md\:w-\[768px\]{
     width: 768px;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
   }
 }
