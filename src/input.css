@@ -28,6 +28,6 @@
     }
 
     .button {
-        @apply min-w-36 min-h-9 border border-indigo-700 hover:bg-white/5 duration-300;
+        @apply min-w-36 min-h-9 border border-indigo-700 hover:bg-white/5 active:text-indigo-50 active:bg-indigo-700 transition-all;
     }
 }

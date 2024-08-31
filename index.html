@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encryptor</title>
     <link rel="stylesheet" href="./src/output.css">
+    <script src="./js/API.js"></script>
 </head>
 <body class="bg-slate-900 text-slate-400 font-poppins size-full flex flex-col items-center">
     <div class="flex flex-col min-h-screen md:w-[768px]">
@@ -15,24 +16,39 @@
             <div class="flex flex-row">  
             </div>
         </div>
-        <div class="flex flex-col flex-grow p-3 gap-4">
-            <div class="flex flex-col">
-                <label for="input">Input:</label>
-                <textarea name="input" rows="5" class="input"></textarea>
-            </div>
-            <div class="flex flex-col">
-                <label for="output">Output:</label>
-                <textarea name="output" rows="5" class="input" readonly></textarea>
-            </div>
-            <div class="flex flex-row justify-end">
-                <button class="button">Encrypt</button>
-                <button class="button">Decrypt</button>
+        <div class="flex flex-col flex-grow p-3">
+            <div class="relative flex flex-col gap-4 border border-slate-800 p-5 mt-3">
+                <div class="flex flex-row justify-between gap-5">
+                    <div class="flex flex-col flex-grow">
+                        <label for="key">Key:</label>
+                        <input name="key" class="input" id="key"></input>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <label for="iv">IV:</label>
+                        <input name="iv" class="input" id="iv"></input>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <label for="input">Input:</label>
+                    <textarea name="input" rows="5" class="input" id="input"></textarea>
+                </div>
+                <div class="flex flex-col">
+                    <label for="output">Output:</label>
+                    <textarea name="output" rows="5" class="input" id="output" readonly></textarea>
+                </div>
+                <div class="flex flex-row justify-end">
+                    <button class="button" id="encrypt">Encrypt</button>
+                    <button class="button" id="decrypt">Decrypt</button>
+                </div>
+                <span class="absolute -translate-y-8 translate-x-3">
+                    SHA256 AES
+                </span>
             </div>
         </div>
         <div class="flex flex-grow-0 border-t border-slate-800 p-3 flex-col justify-center items-center">
             2024
         </div>
     </div>
-    
 </body>
+<script src="./js/base.js"></script>
 </html>
