@@ -606,6 +606,11 @@ html{
   color: rgb(238 242 255 / var(--tw-text-opacity));
 }
 
+.error{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .absolute{
   position: absolute;
 }
@@ -614,8 +619,8 @@ html{
   position: relative;
 }
 
-.mt-3{
-  margin-top: 0.75rem;
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .flex{

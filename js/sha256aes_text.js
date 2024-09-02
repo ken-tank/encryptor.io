@@ -1,12 +1,12 @@
-var key = document.getElementById("key");
-var iv = document.getElementById("iv");
-var input = document.getElementById("input");
-var output = document.getElementById("output");
-var encrypt = document.getElementById("encrypt");
-var decrypt = document.getElementById("decrypt");
-
-function Init() 
+function SHA256AES_Text() 
 {
+    var key = document.getElementById("sha256aes_key");
+    var iv = document.getElementById("sha256aes_iv");
+    var input = document.getElementById("sha256aes_input");
+    var output = document.getElementById("sha256aes_output");
+    var encrypt = document.getElementById("sha256aes_encrypt");
+    var decrypt = document.getElementById("sha256aes_decrypt");
+
     encrypt.addEventListener(
         "click",
         () => {
@@ -50,4 +50,4 @@ function Init()
     console.log("Initialize");
 }
 
-Init();
+SHA256AES_Text();
