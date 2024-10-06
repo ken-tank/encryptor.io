@@ -1,7 +1,8 @@
 function SHA256AES_Text() 
 {
     var key = document.getElementById("sha256aes_key");
-    var iv = "SV85x1MH5OM4qwtt/rlllaNbmjXNtCfiiFA3QzpSggE=";
+    //var iv = "SV85x1MH5OM4qwtt/rlllaNbmjXNtCfiiFA3QzpSggE=";
+    var iv = document.getElementById("sha256aes_iv");
     var input = document.getElementById("sha256aes_input");
     var output = document.getElementById("sha256aes_output");
     var encrypt = document.getElementById("sha256aes_encrypt");

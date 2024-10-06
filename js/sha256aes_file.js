@@ -1,7 +1,8 @@
 function SHA256AES_File() 
 {
     var key = document.getElementById("sha256aes-file_key");
-    var iv = "SV85x1MH5OM4qwtt/rlllaNbmjXNtCfiiFA3QzpSggE=";
+    var iv = document.getElementById("sha256aes-file_iv");
+    //var iv = "SV85x1MH5OM4qwtt/rlllaNbmjXNtCfiiFA3QzpSggE=";
     var input = document.getElementById("sha256aes-file_input");
     var encrypt = document.getElementById("sha256aes-file_encrypt");
     var decrypt = document.getElementById("sha256aes-file_decrypt");
