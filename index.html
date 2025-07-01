@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <title>Encryptor</title>
     <link rel="stylesheet" href="./src/output.css">
     <script src="./js/API.js"></script>
@@ -17,24 +18,42 @@
             </div>
         </div>
         <div class="flex flex-col flex-grow p-3">
-            <!-- SHA256 AES Text -->
+            <!-- Key -->
             <div class="relative flex flex-col gap-4 border border-slate-800 p-5 mt-6">
                 <div class="flex md:flex-row flex-col md:justify-between md:gap-5">
                     <div class="flex flex-col flex-grow">
                         <label for="key">Key:</label>
                         <input name="key" class="input" id="sha256aes_key"></input>
+                        <input name="key" class="input" id="sha256aes_key_raw" disabled></input>
                     </div>
                     <div class="flex flex-col flex-grow">
                         <label for="iv">IV:</label>
                         <input name="iv" class="input" id="sha256aes_iv"></input>
+                        <input name="iv" class="input" id="sha256aes_iv_raw" disabled></input>
                     </div>
                 </div>
+                <span class="absolute -translate-y-8 translate-x-3">
+                    Seacret Key
+                </span>
+            </div>
+            <!-- SHA256 AES Text -->
+            <div class="relative flex flex-col gap-4 border border-slate-800 p-5 mt-6">
                 <div class="flex flex-col">
-                    <label for="input">Input:</label>
+                    <div class="flex flex-row justify-between">
+                        <label for="input">Input:</label>
+                        <div class="flex flex-row">
+                            <button id="copy-text-input" class="button h-full">Copy</button>
+                        </div>
+                    </div>
                     <textarea name="input" rows="5" class="input" id="sha256aes_input"></textarea>
                 </div>
                 <div class="flex flex-col">
-                    <label for="output">Output:</label>
+                    <div class="flex flex-row justify-between">
+                        <label for="output">Output:</label>
+                        <div class="flex flex-row">
+                            <button id="copy-text-output" class="button h-full">Copy</button>
+                        </div>
+                    </div>
                     <textarea name="output" rows="5" class="input" id="sha256aes_output" readonly></textarea>
                 </div>
                 <div class="flex flex-row justify-end">
@@ -47,16 +66,6 @@
             </div>
             <!-- SHA256 AES File -->
             <div class="relative flex flex-col gap-4 border border-slate-800 p-5 mt-6">
-                <div class="flex md:flex-row flex-col md:justify-between md:gap-5">
-                    <div class="flex flex-col flex-grow">
-                        <label for="key">Key:</label>
-                        <input name="key" class="input" id="sha256aes-file_key"></input>
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <label for="iv">IV:</label>
-                        <input name="iv" class="input" id="sha256aes-file_iv"></input>
-                    </div>
-                </div>
                 <div class="flex flex-col">
                     <label for="input">Input:</label>
                     <input type="file" name="input" id="sha256aes-file_input" class="input">
@@ -80,4 +89,5 @@
 </body>
 <script src="./js/sha256aes_text.js"></script>
 <script src="./js/sha256aes_file.js"></script>
+<script src="./js/master.js"></script>
 </html>
