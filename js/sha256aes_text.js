@@ -1,5 +1,4 @@
-function SHA256AES_Text() 
-{
+function SHA256AES_Text() {
     var key = document.getElementById("sha256aes_key");
     var key_raw = document.getElementById("sha256aes_key_raw");
     //var iv = "SV85x1MH5OM4qwtt/rlllaNbmjXNtCfiiFA3QzpSggE=";
@@ -37,13 +36,11 @@ function SHA256AES_Text()
     encrypt.addEventListener(
         "click",
         () => {
-            if (key.value == "") 
-            {
+            if (key.value == "") {
                 output.value = "Error: Key Can't Null"
                 return;
             }
-            if (iv.value == "") 
-            {
+            if (iv.value == "") {
                 output.value = "Error: IV Can't Null"
                 return;
             }
@@ -57,13 +54,11 @@ function SHA256AES_Text()
     decrypt.addEventListener(
         "click",
         () => {
-            if (key.value == "") 
-            {
+            if (key.value == "") {
                 output.value = "Error: Key Can't Null"
                 return;
             }
-            if (iv.value == "") 
-            {
+            if (iv.value == "") {
                 output.value = "Error: IV Can't Null"
                 return;
             }
@@ -74,7 +69,7 @@ function SHA256AES_Text()
             })
         }
     );
-    
+
     console.log("Initialize");
 }
 
